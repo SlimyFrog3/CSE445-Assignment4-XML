@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+	<!-- intents are a little ugly took some getting used to -->
+	<!-- Defining the schema, elements that are in the same level follow the ;eft right order of diagram -->
+	<xs:element name="NationalParks">
+		<!--gimme the root-->
+		<xs:complexType>
+			<xs:sequence>
+				<!-- commencing the park declrations-->
+				<!--first child name -->
+				<xs:element name="NationalPark"
+							minOccurs="1"
+							maxOccurs="unbounded">
+					<!-- unbounded for multiple parks-->
+					<xs:complexType>
+						<xs:sequence>
+					<xs:element name="Name"
+								type="xs:string"
+								/>
+					<!-- allowing multiple phones per the diagram -->
+					<xs:element name="Phone"
+								type="xs:string"
+								minOccurs="1"
+								maxOccurs="unbounded"
+								/>
+					<!-- beggining of the address child who has multiple childs inside itself -->
+					<xs:element name="Address">
+						<xs:complexType>
+							<xs:sequence>
+								<!-- referencing assignment doc for this  child sequencing -->
+								<xs:element name="Number"
+								type="xs:string"
+								/>
+
+								<xs:element name="Street"
+								type="xs:string"
+								/>
+
+								<xs:element name="City"
+								type="xs:string"
+								/>
+
+								<xs:element name="State"
+								type="xs:string"
+								/>
+
+								<xs:element name="Zip"
+								type="xs:string"
+								/>
+
+							</xs:sequence>
+							<!-- end of child sequence -->
+							<xs:attribute name="NearestAirport"
+											type="xs:string"
+											use="required"/>
+						</xs:complexType>
+					</xs:element>
+							<!-- end of Address's scope -->
+					</xs:sequence>
+							<!-- end of national park's children section -->
+							<xs:attribute name="Rating"
+										type="xs:decimal"
+										use="optional"
+										/>
+						</xs:complexType>
+					</xs:element>
+				<!-- end of national park section -->
+			</xs:sequence>
+			<!-- end of root national parks' child section -->
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>
