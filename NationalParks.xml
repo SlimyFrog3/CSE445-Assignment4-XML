@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<NationalParks>
+<NationalParks xmlns="https://slimyfrog3.github.io/CSE445-Assignment4-XML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://slimyfrog3.github.io/CSE445-Assignment4-XML https://slimyfrog3.github.io/CSE445-Assignment4-XML/NationalParks.xsd">
+	<!-- adding namespace similar to course.xsd example from documentation-->
 	<NationalPark Rating="4.9">
 		<Name>Grand Canyon</Name>
 		<Phone>928-638-7496</Phone>
@@ -127,3 +128,4 @@
 		</Address>
 	</NationalPark>
 </NationalParks>
+<!--for some national parks, I used a certain entrance/visitor center or the post office given in the government website for the national park-->

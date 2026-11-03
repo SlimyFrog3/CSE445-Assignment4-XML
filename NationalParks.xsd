@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
-
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="https://slimyfrog3.github.io/CSE445-Assignment4-XML" targetNamespace="https://slimyfrog3.github.io/CSE445-Assignment4-XML" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<!-- adding a namespace similar to course.xsd-->
 	<!-- intents are a little ugly took some getting used to -->
 	<!-- Defining the schema, elements that are in the same level follow the ;eft right order of diagram -->
 	<xs:element name="NationalParks">
